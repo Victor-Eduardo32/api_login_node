@@ -1,4 +1,4 @@
-import { UserProps } from "../types/productProps";
+import { UserProps } from "../types/userProps";
 
 export class User {
     private constructor(private props: UserProps){}
