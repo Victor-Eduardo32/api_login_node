@@ -1,4 +1,4 @@
-import { CreateUserUseCase } from "./application/usecases/user/create-user/create-product.usecase";
+import { CreateUserUseCase } from "./application/usecases/user/create-user/create-user.usecase";
 import { FindAllUserUseCase } from "./application/usecases/user/find-all-user/find-all-user.usecase";
 import { FindUserUseCase } from "./application/usecases/user/find-user/find-user.usecase";
 import { ApiExpress } from "./infra/api/express/api.express";
