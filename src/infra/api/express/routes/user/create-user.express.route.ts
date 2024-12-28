@@ -10,14 +10,14 @@ export class CreateUserRoute implements Route {
     private constructor(
         private readonly path: string,
         private readonly method: HttpMethod,
-        private readonly createProductService: CreateUserUseCase
+        private readonly createUserService: CreateUserUseCase
     ){}
 
-    public static create(createProductService: CreateUserUseCase) {
+    public static create(createUserService: CreateUserUseCase) {
         return new CreateUserRoute(
             "/user",
             HttpMethod.POST,
-            createProductService
+            createUserService
         )
     }
 
@@ -31,7 +31,7 @@ export class CreateUserRoute implements Route {
                 password
             }
 
-            const output: CreateUserOutPutDto = await this.createProductService.execute(input)
+            const output: CreateUserOutPutDto = await this.createUserService.execute(input)
 
             const responseBody = this.present(output)
 
